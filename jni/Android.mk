@@ -20,6 +20,7 @@ LOCAL_MODULE    := libiocipher
 LOCAL_STATIC_LIBRARIES := libsqlfs
 LOCAL_SHARED_LIBRARIES := libsqlcipher_android
 LOCAL_CFLAGS += -DHAVE_LIBSQLCIPHER
+LOCAL_C_INCLUDES := jni
 # Google's gold linker has bugs, so use good ol' binutils
 # https://code.google.com/p/android/issues/detail?id=109071
 # http://osdir.com/ml/android-ndk/2013-02/msg00107.html
@@ -34,6 +35,7 @@ LOCAL_SRC_FILES := \
 	toStringArray.cpp \
 	info_guardianproject_iocipher_File.cpp \
 	info_guardianproject_iocipher_VirtualFileSystem.cpp \
+	info_guardianproject_iocipher_media_MediaRecorder.cpp \
 	info_guardianproject_libcore_io_Memory.cpp \
 	info_guardianproject_libcore_io_OsConstants.cpp \
 	info_guardianproject_libcore_io_Posix.cpp
